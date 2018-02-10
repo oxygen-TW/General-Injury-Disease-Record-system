@@ -1,6 +1,6 @@
 ﻿namespace 傷病紀錄系統
 {
-    partial class Form1
+    partial class Main
     {
         /// <summary>
         /// 設計工具所需的變數。
@@ -28,7 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Patient_Name = new System.Windows.Forms.TextBox();
             this.b_Submit = new System.Windows.Forms.Button();
             this.Age = new System.Windows.Forms.TextBox();
@@ -47,15 +54,54 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 128);
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column3,
+            this.Column4,
+            this.Column5,
+            this.Column6});
+            this.dataGridView1.Location = new System.Drawing.Point(12, 124);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(549, 247);
+            this.dataGridView1.Size = new System.Drawing.Size(643, 247);
             this.dataGridView1.TabIndex = 0;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Name";
+            this.Column1.Name = "Column1";
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Age";
+            this.Column2.Name = "Column2";
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Sex";
+            this.Column3.Name = "Column3";
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Symptom";
+            this.Column4.Name = "Column4";
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "Treatment";
+            this.Column5.Name = "Column5";
+            // 
+            // Column6
+            // 
+            this.Column6.HeaderText = "Special Need";
+            this.Column6.Name = "Column6";
             // 
             // Patient_Name
             // 
@@ -66,10 +112,12 @@
             // 
             // b_Submit
             // 
-            this.b_Submit.Location = new System.Drawing.Point(486, 95);
+            this.b_Submit.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.b_Submit.Location = new System.Drawing.Point(467, 95);
             this.b_Submit.Name = "b_Submit";
-            this.b_Submit.Size = new System.Drawing.Size(75, 23);
-            this.b_Submit.TabIndex = 2;
+            this.b_Submit.Size = new System.Drawing.Size(188, 23);
+            this.b_Submit.TabIndex = 7;
             this.b_Submit.Text = "Submit";
             this.b_Submit.UseVisualStyleBackColor = true;
             this.b_Submit.Click += new System.EventHandler(this.B_Submit_Click);
@@ -79,7 +127,7 @@
             this.Age.Location = new System.Drawing.Point(12, 64);
             this.Age.Name = "Age";
             this.Age.Size = new System.Drawing.Size(100, 22);
-            this.Age.TabIndex = 3;
+            this.Age.TabIndex = 2;
             // 
             // Sex
             // 
@@ -91,22 +139,24 @@
             this.Sex.Location = new System.Drawing.Point(135, 26);
             this.Sex.Name = "Sex";
             this.Sex.Size = new System.Drawing.Size(116, 20);
-            this.Sex.TabIndex = 4;
+            this.Sex.TabIndex = 3;
             // 
             // Patient_Symptom
             // 
             this.Patient_Symptom.Location = new System.Drawing.Point(266, 24);
             this.Patient_Symptom.Multiline = true;
             this.Patient_Symptom.Name = "Patient_Symptom";
-            this.Patient_Symptom.Size = new System.Drawing.Size(141, 65);
+            this.Patient_Symptom.Size = new System.Drawing.Size(183, 65);
             this.Patient_Symptom.TabIndex = 5;
             // 
             // Treatment
             // 
-            this.Treatment.Location = new System.Drawing.Point(420, 24);
+            this.Treatment.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.Treatment.Location = new System.Drawing.Point(467, 24);
             this.Treatment.Multiline = true;
             this.Treatment.Name = "Treatment";
-            this.Treatment.Size = new System.Drawing.Size(141, 65);
+            this.Treatment.Size = new System.Drawing.Size(188, 65);
             this.Treatment.TabIndex = 6;
             // 
             // Label1
@@ -148,7 +198,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(418, 9);
+            this.label5.Location = new System.Drawing.Point(465, 9);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(52, 12);
             this.label5.TabIndex = 11;
@@ -159,7 +209,7 @@
             this.PatientSpecialNeed.Location = new System.Drawing.Point(135, 64);
             this.PatientSpecialNeed.Name = "PatientSpecialNeed";
             this.PatientSpecialNeed.Size = new System.Drawing.Size(116, 22);
-            this.PatientSpecialNeed.TabIndex = 12;
+            this.PatientSpecialNeed.TabIndex = 4;
             // 
             // label6
             // 
@@ -170,11 +220,11 @@
             this.label6.TabIndex = 13;
             this.label6.Text = "Special Need";
             // 
-            // Form1
+            // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(573, 387);
+            this.ClientSize = new System.Drawing.Size(667, 387);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.PatientSpecialNeed);
             this.Controls.Add(this.label5);
@@ -189,8 +239,9 @@
             this.Controls.Add(this.b_Submit);
             this.Controls.Add(this.Patient_Name);
             this.Controls.Add(this.dataGridView1);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Name = "Main";
+            this.Text = "傷病紀錄系統 v1.1";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -213,6 +264,12 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox PatientSpecialNeed;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
     }
 }
 
